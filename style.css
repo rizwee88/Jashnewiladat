@@ -5,15 +5,20 @@ background-image: url("./cover.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 }
+.topnav{
 
+  margin-right: 150px; 
+  margin-top: 40px;
+  height: 85px;
+  float: right;
+
+}
 .topnav a {
-  margin-bottom: 50px;
-  margin-right: 50px;
+  margin: 10px;
   float: right;
   color: rgba(0,78,39,255);
-  text-align: right;
   text-decoration: solid;
-  font-size: 25px;
+  font-size: 35px;
   
 }
 
