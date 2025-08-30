@@ -1,11 +1,9 @@
-
 body {
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   /* background-image: url("./cover.jpg"); */
   background-size: cover;
   background-position: center 90px;
@@ -38,26 +36,26 @@ body {
   font-size: 3rem;
 }
 
-
-.bism{
+.bism {
   margin-bottom: 525px;
   display: flex;
   align-items: flex-end;
   height: 100px;
 }
-.topnav{
+.topnav {
   display: flex;
-  justify-content: flex-end;  /* right side */
+  justify-content: flex-end; /* right side */
   align-items: center;
-  position: absolute;   /* fix karne ke liye */
-  top: 80px;            /* upar se gap */
-  right: center;         /* right se gap */
+  position: absolute; /* fix karne ke liye */
+  top: 80px; /* upar se gap */
+  right: center; /* right se gap */
   height: 85px;
   gap: 30px;
 }
 .topnav a {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif , cursive;
-  color:  #065a04f6;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    cursive;
+  color: #065a04f6;
   text-decoration: solid;
   font-size: 40px;
   font-size: 50px;
@@ -73,29 +71,199 @@ body {
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
-  .logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      overflow: hidden;
-      display: inline-block;
-      transition: all 0.3s ease;
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  transition: all 0.3s ease;
 
-      /* move logo to right side */
-      position: absolute;
-      top: -10px;   /* top se distance */
-      right: 25px; /* right side pe fix */
-    }
+  /* move logo to right side */
+  position: absolute;
+  top: -10px; /* top se distance */
+  right: 25px; /* right side pe fix */
+}
 
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10%;
-    }
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
 
-    /* hover effect */
-    .logo:hover {
-      outline: 4px solid #028c2e;
-      outline-offset: 6px;
-    }
+/* hover effect */
+.logo:hover {
+  outline: 4px solid #028c2e;
+  outline-offset: 6px;
+}
+/* Seerat Contents */
+/* .history-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 50px;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap; *//*Enables wrapping for smaller screens
+} */
+
+/* Image Container */
+/* .history-image {
+  position: relative;
+  width: 350px;
+  height: 450px;
+  transition: transform 0.4s ease;
+}
+
+.history-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 3;
+  display: block;
+  border-radius: 5px;
+} */
+
+/* Border Layers */
+/* .border-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.border-orange {
+  border: 8px solid #008037;
+  top: -15px;
+  left: -15px;
+  z-index: 1;
+}
+
+.border-white {
+  border: 8px solid white;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.border-black {
+  border: 8px solid black;
+  top: 25px;
+  left: 25px;
+  z-index: 0;
+} */
+
+/* Hover Animation for Borders */
+/* .history-image:hover .border-orange {
+  top: -25px;
+  left: -25px;
+}
+
+.history-image:hover .border-white {
+  top: 20px;
+  left: 20px;
+}
+
+.history-image:hover .border-black {
+  top: 35px;
+  left: 35px;
+}
+
+.history-image:hover {
+  transform: scale(1.05);
+} */
+
+/* Text Content */
+/* .history-content {
+  max-width: 500px;
+}
+
+.history-content .welcome {
+  color: #008037;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.history-content .title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.history-content .underline {
+  width: 50px;
+  height: 3px;
+  background: #008037;
+  margin: 15px 0;
+}
+
+.history-content .subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.history-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+} */
+
+/* Button with hover effect */
+/* .history-content .btn-read {
+  display: inline-block;
+  background: #008037;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.history-content .btn-read:hover {
+  background: #008037;
+  transform: scale(1.05);
+} 
+
+ Responsive Design 
+@media (max-width: 768px) {
+  .history-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .history-image {
+    width: 300px;
+    height: 380px;
+    margin-bottom: 20px;
+  }
+
+  .history-content {
+    max-width: 100%;
+  }
+
+  .history-content .title {
+    font-size: 28px;
+  }
+
+  .history-content .subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-image {
+    width: 250px;
+    height: 320px;
+  }
+
+  .history-content .title {
+    font-size: 24px;
+  }
+
+  .history-content .subtitle {
+    font-size: 16px;
+  }
+}/*
