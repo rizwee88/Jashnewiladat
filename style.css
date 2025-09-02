@@ -1,115 +1,82 @@
+/* Add space for fixed navbar */
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  /* background-image: url("./cover.jpg"); */
-  background-size: cover;
-  background-position: center 90px;
-  background-repeat: no-repeat;
-  background: linear-gradient(65deg, #028c2e, #e8d01c);
-  box-shadow: inset 0 0 10px rgba(5, 119, 10, 0.7);
-  height: 100vh;
   margin: 0;
-  height: 100vh;
-  overflow: hidden;
-}
-.bg-carousel {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center 95px;
-  background-repeat: no-repeat;
-  transition: background-image 1s ease-in-out; /* smooth change */
-  z-index: -1;
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: right;
-  justify-content: center;
-  height: 100vh;
-  color: white;
-  font-size: 3rem;
-}
-
-.bism {
-  margin-bottom: 700px;
-  display: flex;
-  align-items: flex-end;
-  height: 100px;
+  padding: 0;
+  background: #e5f7ed;
+  font-family: "Noto Nastaliq Urdu", serif;
 }
 .topnav {
-  display: flex;
-  justify-content: flex-end; /* right side */
-  align-items: center;
-  position: absolute; /* fix karne ke liye */
-  top: 80px; /* upar se gap */
-  right: center; /* right se gap */
+  margin-right: 35%;
+  margin-top: 40px;
   height: 85px;
-  gap: 30px;
+  float: right;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
 .topnav a {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
-    cursive;
-  color: #065a04f6;
+  margin: 10px;
+  float: right;
+  /* color: rgba(0, 78, 39, 255); */
+  color: white;
   text-decoration: solid;
-  font-size: 40px;
-  font-size: 50px;
-  color: black;
-  text-decoration: none;
-  opacity: 0; /* animation start ke liye hidden */
-  transform: translateY(-50px); /* thoda upar se start */
+  font-size: 25px;
 }
 
 .topnav a:hover {
-  background: linear-gradient(90deg, #028c2e, #e8d01c); /* green → yellow */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  color: #e8d01c;
 }
-.logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: inline-block;
-  transition: all 0.3s ease;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-  /* move logo to right side */
-  position: absolute;
-  top: -10px; /* top se distance */
-  right: 25px; /* right side pe fix */
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 3%;
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10%;
+  height: 40px;
+  margin-right: 10px;
 }
 
 /* hover effect */
 .logo:hover {
-  outline: 4px solid #028c2e;
-  outline-offset: 6px;
+  transform: scale(2);
+}
+
+/* Banner Section */
+.banner {
+  background: url("images/cover.jpg") no-repeat center center/cover;
+  margin-bottom: 100px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 /* Seerat Contents */
-/* .history-section {
+.history-section {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 50px;
   gap: 50px;
-  font-family: Arial, sans-serif;
-  flex-wrap: wrap;*/ /*Enables wrapping for smaller screens 
-}*/
+  font-family: "Noto Nastaliq Urdu", serif;
+  flex-wrap: wrap; /* Enables wrapping for smaller screens*/
+}
 
 /* Image Container */
-/* .history-image {
+.history-image {
   position: relative;
   width: 350px;
   height: 450px;
@@ -124,10 +91,10 @@ body {
   z-index: 3;
   display: block;
   border-radius: 5px;
-} */
+}
 
 /* Border Layers */
-/* .border-layer {
+.border-layer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -135,7 +102,7 @@ body {
 }
 
 .border-orange {
-  border: 8px solid #008700;
+  border: 8px solid #008037;
   top: -15px;
   left: -15px;
   z-index: 1;
@@ -153,10 +120,10 @@ body {
   top: 25px;
   left: 25px;
   z-index: 0;
-} */
+}
 
 /* Hover Animation for Borders */
-/* .history-image:hover .border-orange {
+.history-image:hover .border-orange {
   top: -25px;
   left: -25px;
 }
@@ -173,21 +140,21 @@ body {
 
 .history-image:hover {
   transform: scale(1.05);
-} */
+}
 
 /* Text Content */
-/* .history-content {
+.history-content {
   max-width: 500px;
 }
 
 .history-content .welcome {
-  color: #008700;
-  font-size: 18px;
+  color: #008037;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
 .history-content .title {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -195,7 +162,7 @@ body {
 .history-content .underline {
   width: 50px;
   height: 3px;
-  background: #008700;
+  background: #008037;
   margin: 15px 0;
 }
 
@@ -208,12 +175,12 @@ body {
 .history-content p {
   margin-bottom: 15px;
   line-height: 1.6;
-} */
+}
 
 /* Button with hover effect */
-/* .history-content .btn-read {
+.history-content .btn-read {
   display: inline-block;
-  background: #008700;
+  background: #008037;
   color: white;
   padding: 12px 25px;
   text-decoration: none;
@@ -222,12 +189,416 @@ body {
 }
 
 .history-content .btn-read:hover {
-  background: #008700;
+  background: #008037;
   transform: scale(1.05);
-} */
+}
+/* Section-2 */
+.vision-section {
+  margin-top: 10%;
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  font-family: "Noto Nastaliq Urdu", serif;
+}
 
+.intro {
+  color: #008037;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.desc {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 20px;
+  color: #555;
+}
+
+.vision-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.vision-card {
+  background: #fff;
+  padding: 30px 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card .icon-box {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  transition: background 0.4s ease;
+}
+
+.vision-card .icon-box img {
+  width: 30px;
+  filter: invert(1);
+}
+
+.vision-card h4 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.line {
+  width: 50px;
+  height: 3px;
+  background: #9bdfba;
+  margin: 10px auto;
+  transition: background 0.4s ease;
+}
+
+.vision-card p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Hover Effects */
+.vision-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background: #e5f7ed;
+  color: #555;
+}
+
+.vision-card:hover .line {
+  background: #fff;
+}
+
+.vision-card:hover .icon-box {
+  background: #fff;
+}
+
+.vision-card:hover .icon-box img {
+  filter: invert(0);
+}
+/* Seerat banner */
+.seerat-banner img {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Makes image span full width */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes any extra space below image */
+}
+/* Blog Section */
+.blog-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f5f9f6;
+  border-radius: 10px;
+  font-family: "Noto Nastaliq Urdu", serif;
+  direction: rtl;
+}
+
+.blog-section h2 {
+  text-align: center;
+  color: #008037;
+  font-size: 40px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #008037;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.blog-post {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.blog-post h3 {
+  color: #004d20;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.blog-post p {
+  font-size: 20px;
+  color: #333;
+  line-height: 2;
+}
+
+/* Hayayt E Tayyaba */
+
+.hayat-section {
+  background-color: #f8f9fa; /* Light background for readability */
+  padding: 50px 20px;
+  border-top: 4px solid #008037; /* Green Islamic accent */
+  border-bottom: 4px solid #ffd700; /* Gold accent */
+  max-width: 1100px;
+  margin: 50px auto;
+  border-radius: 12px;
+  font-family: "Noto Nastaliq Urdu", serif;
+}
+
+.hayat-heading {
+  text-align: center;
+  font-size: 40px;
+  color: #008037;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.hayat-content {
+  font-size: 22px;
+  line-height: 2.2;
+  color: #333;
+
+  text-align: right; /* For Urdu alignment */
+  direction: rtl;
+}
+
+.hayat-content p {
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-left: 4px solid #008037;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.hayat-content p:hover {
+  background: #008037;
+  color: #fff;
+  border-left-color: #ffd700;
+}
+/* Photo Gallery */
+.photo-gallery {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: "Noto Nastaliq Urdu", serif;
+}
+
+.gallery-heading h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.gallery-heading p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 50px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+/* Peghaam e Nabvi */
+/* Section with Islamic pattern background */
+.peghaam-section {
+  background: url("img/background.jpg");
+  background-color: #f8f8f8;
+  background-repeat: repeat;
+  padding: 60px 20px;
+  margin: 50px;
+  text-align: right;
+  direction: rtl;
+  font-family: "Noto Nastaliq Urdu", serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Heading with decorative line */
+.section-title {
+  font-size: 40px;
+  color: #008037;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #008037;
+  margin: 10px auto;
+}
+
+.intro-text {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Quran verse and Hadith styles */
+.verse,
+.hadith {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.verse h3,
+.hadith h3 {
+  font-size: 24px;
+  color: #008037;
+  margin-bottom: 10px;
+}
+.verse q,
+.hadith q {
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Message points grid */
+.message-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.point {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.point:hover {
+  transform: translateY(-5px);
+}
+.point h3 {
+  font-size: 24px;
+  color: #008037;
+  margin-bottom: 10px;
+}
+.point p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+/* Footer */
+.site-footer {
+  background-color: #008037;
+  color: white;
+  padding: 50px 20px 20px;
+  font-family: "Noto Nastaliq Urdu", serif;
+  direction: rtl;
+  margin-top: 200px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 16px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #e8d01c;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #e8d01c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+}
+
+.footer-bottom strong {
+  color: #e8d01c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-social a {
+    margin: 0 10px;
+  }
+}
 /* Responsive Design */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .history-section {
     flex-direction: column;
     text-align: center;
@@ -266,4 +637,27 @@ body {
   .history-content .subtitle {
     font-size: 16px;
   }
-} */
+}
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 15px;
+  }
+  .blog-section h2 {
+    font-size: 32px;
+  }
+  .blog-post h3 {
+    font-size: 24px;
+  }
+  .blog-post p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+}
